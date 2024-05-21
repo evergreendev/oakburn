@@ -18,6 +18,7 @@ const config: Config = {
         'bg-gray-500': "#231d19"
       },
       backgroundImage: {
+        "dist": "url('../public/dist-background.png')",
         "hero": "url('../public/background.png')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
