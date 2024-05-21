@@ -12,8 +12,8 @@ const Nav = () => {
 
     useEffect(() => {
         handleScroll();
-        window.addEventListener('scroll', handleScroll, { passive: true });
-    },[]);
+        window.addEventListener('scroll', handleScroll, {passive: true});
+    }, []);
 
     useEffect(() => {
 
@@ -25,16 +25,19 @@ const Nav = () => {
     w-full
     flex
     z-50
-        ${scrollPosition === 0 ? "bg-transparent": "bg-stone-900"}
+        ${scrollPosition === 0 ? "bg-transparent" : "bg-stone-900"}
     `}>
-        <div className="flex items-center justify-around m-auto gap-12 p-2"><Image src={logo} className={`
-            ${scrollPosition === 0 ? "w-14":"w-10"}
+        <div className="flex items-center justify-around m-auto gap-12 p-2">
+            <Link href="/">
+                <Image src={logo} className={`
+            ${scrollPosition === 0 ? "w-14" : "w-10"}
             mx-auto
             duration-700
             transition-all
         `} alt="Oak Burn Barbecue"/>
-            <Link href="/menu">Menu</Link>
-            <Link href="/catering">Catering</Link>
+            </Link>
+            <Link className="hover:text-blue-300" href="/menu">Menu</Link>
+            <Link className="hover:text-blue-300" href="/catering">Catering</Link>
         </div>
     </div>
 }
