@@ -1,7 +1,7 @@
 "use client"
 import {useEffect, useRef} from "react";
 import Image, {StaticImageData} from "next/image";
-import anime, {AnimeInstance} from "animejs";
+import anime from "animejs";
 
 const Header = ({src, background}:{src: string|StaticImageData, background: string|StaticImageData})=> {
     const animationRef = useRef<any>(null);
@@ -24,11 +24,6 @@ const Header = ({src, background}:{src: string|StaticImageData, background: stri
             opacity: .75,
         })
 
-        /*animationRef.current = anime({
-            targets: [".shadow-sm"],
-            translateX: 250
-        })*/
-
     }, [])
 
     return <div className="p-8 sm:pt-24 sm:min-h-screen w-full flex justify-around items-center relative">
@@ -38,7 +33,6 @@ const Header = ({src, background}:{src: string|StaticImageData, background: stri
         <div className="overflow-hidden absolute inset-0">
             <Image src={background} alt="" className="background-img absolute inset-0 object-cover w-full h-full opacity-10"/>
         </div>
-
     </div>
 }
 
