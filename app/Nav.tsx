@@ -24,6 +24,7 @@ const Nav = () => {
     fixed
     w-full
     flex
+    font-averia
     z-50
         ${scrollPosition === 0 ? "bg-transparent" : "bg-stone-900"}
     `}>
