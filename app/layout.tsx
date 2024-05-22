@@ -3,6 +3,7 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import Nav from "@/app/Nav";
 import {averia} from "@/app/fonts";
+import Footer from "@/app/Footer";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <body className={`${averia.variable} ${inter.className}`}>
         <Nav/>
         {children}
+        <Footer/>
         </body>
         </html>
     );
