@@ -37,7 +37,11 @@ const ImageCard = ({img, title, content, button, reverse = false}: {
         animationRef.current = anime.timeline({
             loop: false,
             autoplay: false,
-            easing: 'easeInOutSine'
+            easing: 'easeInOutSine',
+            complete: anim => {
+                anime.remove(`#${id}-img`);
+                anime.remove(`#${id}-text`);
+            }
         });
         anime({
             targets: `#${id}-img`,
