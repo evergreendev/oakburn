@@ -1,4 +1,5 @@
 import logoFood from "@/public/logo-with-briscuit.jpg"
+import logo from "@/public/oakburn-logo.png"
 import foodBg from "@/public/background.png";
 import Header from "@/app/Header";
 import ImageCard from "@/app/ImageCard";
@@ -17,7 +18,7 @@ export default function Home() {
     return (
         <main className="flex min-h-screen flex-col items-center justify-between overflow-x-hidden">
             <div className="z-10 w-full items-center justify-between font-mono text-sm lg:flex">
-                <Header src={logoFood} background={foodBg}/>
+                <Header src={logo} background={foodBg}/>
             </div>
             <ImageCard
                 title="Our Story"
