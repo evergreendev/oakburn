@@ -4,11 +4,11 @@ import logo from "@/public/oakburn-logo.png"
 
 const Footer = () => {
     return <div className="w-full bg-stone-300">
-        <div className="max-w-screen-lg py-8 px-32 w-full mx-auto flex items-center gap-16 text-bg-gray-500">
-            <Link href="/">
+        <div className="max-w-screen-lg py-8 px-6 sm:px-32 w-full mx-auto flex items-center gap-16 text-bg-gray-500 flex-wrap">
+            <Link href="/" className="mx-auto">
                 <Image src={logo} alt="" className="w-60 p-2"/>
             </Link>
-            <div className="flex gap-16">
+            <div className="flex gap-16 flex-wrap">
                 <div>
                     <h2 className="text-3xl font-averia font-bold">Location</h2>
                     <address><Link

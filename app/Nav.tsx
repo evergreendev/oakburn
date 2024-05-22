@@ -25,7 +25,7 @@ const Nav = () => {
     z-50
         ${scrollPosition === 0 ? "bg-transparent" : "bg-stone-900"}
     `}>
-        <div className="flex items-center justify-around m-auto gap-12 p-2">
+        <div className="flex items-center justify-around m-auto gap-x-12 gap-y-2 p-2 flex-wrap">
             <Link href="/">
                 <Image src={logo} className={`
             ${scrollPosition === 0 ? "w-14" : "w-10"}
