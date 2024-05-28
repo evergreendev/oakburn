@@ -15,7 +15,7 @@ type Button = {
 const ImageCard = ({img, title, content, buttons, reverse = false}: {
     img: StaticImageData,
     title: string,
-    content: string,
+    content: string|React.ReactNode,
     buttons?: Button[],
     reverse?: boolean
 }) => {
