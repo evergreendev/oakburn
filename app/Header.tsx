@@ -26,9 +26,9 @@ const Header = ({src, background}:{src: string|StaticImageData, background: stri
 
     }, [])
 
-    return <div className="p-8 pt-32 sm:pt-24 w-full flex justify-around items-center relative sm:pb-52">
+    return <div className="p-8 pt-32 sm:pt-24 w-full flex justify-around items-center relative sm:pb-52 min-h-[90vh]">
         <div className="translate-x-[-500px] z-10">
-            <Image src={src} alt="" className="main-img shadow-sm z-10 opacity-0 max-w-screen-sm"/>
+            <Image src={src} alt="" className="main-img shadow-sm z-10 opacity-0 w-full sm:max-w-screen-sm"/>
         </div>
         <div className="overflow-hidden absolute inset-0">
             <Image src={background} alt="" className="background-img absolute inset-0 object-cover w-full h-full opacity-10"/>

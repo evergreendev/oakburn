@@ -12,11 +12,11 @@ type Button = {
     href: string;
 }
 
-const ImageCard = ({img, title, content, button, reverse = false}: {
+const ImageCard = ({img, title, content, buttons, reverse = false}: {
     img: StaticImageData,
     title: string,
     content: string,
-    button?: Button,
+    buttons?: Button[],
     reverse?: boolean
 }) => {
     const id = title.replaceAll(" ", "-");
@@ -47,7 +47,7 @@ const ImageCard = ({img, title, content, button, reverse = false}: {
             targets: `#${id}-img`,
             easing: 'easeInOutSine',
             translateY: 200,
-            duration:1,
+            duration: 1,
             opacity: 0,
         })
 
@@ -55,7 +55,7 @@ const ImageCard = ({img, title, content, button, reverse = false}: {
             targets: `#${id}-img`,
             easing: 'easeInOutSine',
             translateY: 200,
-            duration:1,
+            duration: 1,
             opacity: 0,
         });
         animationRef.current.add({
@@ -87,15 +87,17 @@ const ImageCard = ({img, title, content, button, reverse = false}: {
             <Image id={`${id}-img`} src={img} alt="" className="object-cover"/>
             <div className="p-8" id={`${id}-text`}>
                 <h2 className="font-averia text-6xl mb-3 font-bold text-primary-700">{title}</h2>
-                <p>{content}</p>
+                <p className="text-xl pb-8">{content}</p>
                 {
-                    button ?
-                        <div className="flex mt-8">
-                            <Link
-                                className="bg-primary-500 hover:brightness-110 text-white px-6 py-2 rounded-full font-averia text-2xl"
-                                href={button.href}>
-                                <span>{button.text}</span>
-                            </Link>
+                    buttons ?
+                        <div  className="flex mt-4 gap-2 flex-wrap items-center justify-center">
+                            {buttons.map(button => {
+                                return <Link key={button.text}
+                                    className="bg-primary-500 hover:brightness-110 text-white px-6 py-2 rounded-full font-averia text-2xl"
+                                    href={button.href}>
+                                    <span>{button.text}</span>
+                                </Link>
+                            })}
                         </div>
                         : ""
                 }
