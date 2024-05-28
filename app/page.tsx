@@ -27,7 +27,7 @@ export default function Home() {
                 buttons={[
                     {text: "Delivery", href: "/menu"},
                     {text: "Carry Out", href: "/"},
-                    {text: "Catering", href: "/"},
+                    {text: "Catering", href: "/catering"},
                 ]}/*todo add links*/
             />
             <Gallery images={[image3, image2, image1, briscuit, image4, image5, image6]}/>

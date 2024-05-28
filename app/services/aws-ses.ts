@@ -44,7 +44,7 @@ export const sendMembershipMail = async (prevState: any, formData: FormData) => 
     try {
         await transporter.sendMail({
             from: adminMail,
-            to: "joe@egmrc.com",/*todo change this*/
+            to: process.env.ADMIN_EMAIL,/*todo change this*/
             replyTo: email as string,
             subject: `New Catering Request from ${firstName} ${lastName} (oakburnbarbecue.com)`,
             html: `
