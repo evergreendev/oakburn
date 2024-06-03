@@ -8,9 +8,11 @@ const LightBox = ({image, handleClose}: { image: StaticImageData | null, handleC
 
     return <>
         <div className="fixed inset-0 bg-slate-800 z-40 opacity-50" onClick={handleClose}/>
-        <div className="fixed z-50 top-1/2 -translate-y-1/2 p-8 bg-slate-200 bg-opacity-70">
+        <div className="fixed z-50 top-1/2 -translate-y-1/2 p-8 bg-slate-200 bg-opacity-70 max-h-[90vh]">
             <button className="bg-slate-800 p-2 font-bold rounded-t hover:bg-slate-700" onClick={handleClose}>Close</button>
-            <Image src={image.src} alt="" width={image.width} height={image.height}/>
+            <div className="relative w-full h-full">
+                <Image className="object-contain max-h-[80vh] w-auto" src={image.src} alt="" width={image.width} height={image.height}/>
+            </div>
         </div>
     </>
 }
