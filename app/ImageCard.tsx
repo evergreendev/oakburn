@@ -84,7 +84,7 @@ const ImageCard = ({img, title, content, buttons, reverse = false}: {
 
     return <div id={id} className="bg-contain gap-8 bg-orange-200 text-bg-gray-500 bg-dist w-full">
         <div className="max-w-screen-lg flex mx-auto bg-orange-200 bg-opacity-50 flex-wrap md:flex-nowrap">
-            <Image id={`${id}-img`} src={img} alt="" className="object-cover w-5/12"/>
+            <Image id={`${id}-img`} src={img} alt="" className="object-cover md:w-5/12"/>
             <div className="p-8" id={`${id}-text`}>
                 <h2 className="font-averia text-6xl mb-3 font-bold text-primary-700">{title}</h2>
                 <p className="text-xl pb-8">{content}</p>
