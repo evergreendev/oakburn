@@ -34,7 +34,7 @@ const Nav = () => {
             transition-all
         `} alt="Oak Burn Barbecue"/>
             </Link>
-            <Link className="hover:text-blue-300" href="/menu">Delivery</Link>{/*todo add links*/}
+            <Link className="hover:text-blue-300" href="https://www.doordash.com/store/oak-burn-bbq-rapid-city-28425368/">Delivery</Link>
             <Link className="hover:text-blue-300" href="https://order.toasttab.com/online/rushmore-cuisine-821-fairmont-boulevard">Carry Out</Link>
             <Link className="hover:text-blue-300" href="/catering">Catering</Link>
             <address><Link className="hover:text-blue-300"

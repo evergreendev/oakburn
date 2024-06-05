@@ -25,10 +25,10 @@ export default function Home() {
 "
                 img={brisket}
                 buttons={[
-                    {text: "Delivery", href: "/menu"},
+                    {text: "Delivery", href: "https://www.doordash.com/store/oak-burn-bbq-rapid-city-28425368/"},
                     {text: "Carry Out", href: "https://order.toasttab.com/online/rushmore-cuisine-821-fairmont-boulevard"},
                     {text: "Catering", href: "/catering"},
-                ]}/*todo add links*/
+                ]}
             />
             <Gallery images={[image3, image2, image1, brisket, image4, image5, image6]}/>
         </main>
